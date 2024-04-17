@@ -1,122 +1,31 @@
-Comments for self-test -------- Tue Apr 16, 2024 at 22:8:15 EDT
+Comments for self-test -------- Wed Apr 17, 2024 at 16:59:47 EDT
 parsing e-remove.txt ... done
 building e-remove ...
 done
 testing e-remove ...
   Running e-remove on /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA1.txt ...
     python3 e-remove.py /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA1.txt > test-outputs/e-remove/testNFA1-out.txt 2> test-outputs/e-remove/testNFA1-err.txt
-    terminated abnormally
-  standard error output:
-vvvvv
-Traceback (most recent call last):
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 141, in <module>
-    main()
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 137, in main
-    print_ANS()
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 126, in print_ANS
-    transitions = stage_three() # update transitions
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 100, in stage_three
-    print_NFA(stage_two);
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 108, in print_NFA
-    for state, transition_dict in transitions.items():
-AttributeError: 'function' object has no attribute 'items'
-^^^^^
+    terminated normally
   test-outputs/e-remove/testNFA1.txt exists -- comparing with solution NFA
-    File has too few transition table entries (0)
-  THE DFAs DIFFER (INCORRECT):
-vvvvv
-1
-^^^^^
+  the NFAs are the same (correct)
   Running e-remove on /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA2.txt ...
     python3 e-remove.py /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA2.txt > test-outputs/e-remove/testNFA2-out.txt 2> test-outputs/e-remove/testNFA2-err.txt
-    terminated abnormally
-  standard error output:
-vvvvv
-Traceback (most recent call last):
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 141, in <module>
-    main()
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 137, in main
-    print_ANS()
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 126, in print_ANS
-    transitions = stage_three() # update transitions
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 100, in stage_three
-    print_NFA(stage_two);
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 108, in print_NFA
-    for state, transition_dict in transitions.items():
-AttributeError: 'function' object has no attribute 'items'
-^^^^^
+    terminated normally
   test-outputs/e-remove/testNFA2.txt exists -- comparing with solution NFA
-    File has too few transition table entries (0)
-  THE DFAs DIFFER (INCORRECT):
-vvvvv
-1
-^^^^^
+  the NFAs are the same (correct)
   Running e-remove on /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA3.txt ...
     python3 e-remove.py /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA3.txt > test-outputs/e-remove/testNFA3-out.txt 2> test-outputs/e-remove/testNFA3-err.txt
-    terminated abnormally
-  standard error output:
-vvvvv
-Traceback (most recent call last):
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 141, in <module>
-    main()
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 137, in main
-    print_ANS()
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 126, in print_ANS
-    transitions = stage_three() # update transitions
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 100, in stage_three
-    print_NFA(stage_two);
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 108, in print_NFA
-    for state, transition_dict in transitions.items():
-AttributeError: 'function' object has no attribute 'items'
-^^^^^
+    terminated normally
   test-outputs/e-remove/testNFA3.txt exists -- comparing with solution NFA
-    File has too few transition table entries (0)
-  THE DFAs DIFFER (INCORRECT):
-vvvvv
-1
-^^^^^
+  the NFAs are the same (correct)
   Running e-remove on /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA4.txt ...
     python3 e-remove.py /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA4.txt > test-outputs/e-remove/testNFA4-out.txt 2> test-outputs/e-remove/testNFA4-err.txt
-    terminated abnormally
-  standard error output:
-vvvvv
-Traceback (most recent call last):
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 141, in <module>
-    main()
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 137, in main
-    print_ANS()
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 126, in print_ANS
-    transitions = stage_three() # update transitions
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 100, in stage_three
-    print_NFA(stage_two);
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 108, in print_NFA
-    for state, transition_dict in transitions.items():
-AttributeError: 'function' object has no attribute 'items'
-^^^^^
+    terminated normally
   test-outputs/e-remove/testNFA4.txt exists -- comparing with solution NFA
-    File has too few transition table entries (0)
-  THE DFAs DIFFER (INCORRECT):
-vvvvv
-1
-^^^^^
+  the NFAs are the same (correct)
   Running e-remove on /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA5.txt ...
     python3 e-remove.py /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA5.txt > test-outputs/e-remove/testNFA5-out.txt 2> test-outputs/e-remove/testNFA5-err.txt
-    terminated abnormally
-  standard error output:
-vvvvv
-Traceback (most recent call last):
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 141, in <module>
-    main()
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 137, in main
-    print_ANS()
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 126, in print_ANS
-    transitions = stage_three() # update transitions
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 100, in stage_three
-    print_NFA(stage_two);
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 108, in print_NFA
-    for state, transition_dict in transitions.items():
-AttributeError: 'function' object has no attribute 'items'
-^^^^^
+    terminated normally
   test-outputs/e-remove/testNFA5.txt exists -- comparing with solution NFA
     Accepting state lists differ (0 1 2 3 4 5 6 7 8 9 11 12 13 14 15 17 18 19 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 38 40 41 42 43 44 45 48 49 50 51 52 55 56 57 58 59 60 61 62 63 vs 0 1 2 3 4 5 6 7 9 11 13 14 15 17 18 19 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 38 39 41 42 43 44 45 47 48 49 50 51 52 54 56 57 58 59 60 61 62 63)
   THE DFAs DIFFER (INCORRECT):
@@ -125,52 +34,14 @@ vvvvv
 ^^^^^
   Running e-remove on /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA6.txt ...
     python3 e-remove.py /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA6.txt > test-outputs/e-remove/testNFA6-out.txt 2> test-outputs/e-remove/testNFA6-err.txt
-    terminated abnormally
-  standard error output:
-vvvvv
-Traceback (most recent call last):
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 141, in <module>
-    main()
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 137, in main
-    print_ANS()
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 126, in print_ANS
-    transitions = stage_three() # update transitions
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 100, in stage_three
-    print_NFA(stage_two);
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 108, in print_NFA
-    for state, transition_dict in transitions.items():
-AttributeError: 'function' object has no attribute 'items'
-^^^^^
+    terminated normally
   test-outputs/e-remove/testNFA6.txt exists -- comparing with solution NFA
-    File has too few transition table entries (0)
-  THE DFAs DIFFER (INCORRECT):
-vvvvv
-1
-^^^^^
+  the NFAs are the same (correct)
   Running e-remove on /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA7.txt ...
     python3 e-remove.py /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA7.txt > test-outputs/e-remove/testNFA7-out.txt 2> test-outputs/e-remove/testNFA7-err.txt
-    terminated abnormally
-  standard error output:
-vvvvv
-Traceback (most recent call last):
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 141, in <module>
-    main()
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 137, in main
-    print_ANS()
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 126, in print_ANS
-    transitions = stage_three() # update transitions
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 100, in stage_three
-    print_NFA(stage_two);
-  File "/Users/kaylytran/Desktop/355project/e-remove.py", line 108, in print_NFA
-    for state, transition_dict in transitions.items():
-AttributeError: 'function' object has no attribute 'items'
-^^^^^
+    terminated normally
   test-outputs/e-remove/testNFA7.txt exists -- comparing with solution NFA
-    File has too few transition table entries (0)
-  THE DFAs DIFFER (INCORRECT):
-vvvvv
-1
-^^^^^
+  the NFAs are the same (correct)
 done with e-remove
 
 parsing simulate.txt ... done
@@ -179,7 +50,18 @@ done
 testing simulate ...
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA1.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA1.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA1-strings.txt > test-outputs/simulate/testNFA1-out.txt 2> test-outputs/simulate/testNFA1-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 38, in main
+    n_states, initial_state, accepting_states, transitions = read_nfa(filename)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 5, in read_nfa
+    n_states = int(file.readline().strip())
+ValueError: invalid literal for int() with base 10: 'Number of states: 8'
+^^^^^
   test-outputs/simulate/testNFA1-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -189,7 +71,18 @@ vvvvv
 ^^^^^
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA2.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA2.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA2-strings.txt > test-outputs/simulate/testNFA2-out.txt 2> test-outputs/simulate/testNFA2-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 38, in main
+    n_states, initial_state, accepting_states, transitions = read_nfa(filename)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 5, in read_nfa
+    n_states = int(file.readline().strip())
+ValueError: invalid literal for int() with base 10: 'Number of states: 4'
+^^^^^
   test-outputs/simulate/testNFA2-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -199,7 +92,18 @@ vvvvv
 ^^^^^
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA3.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA3.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA3-strings.txt > test-outputs/simulate/testNFA3-out.txt 2> test-outputs/simulate/testNFA3-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 38, in main
+    n_states, initial_state, accepting_states, transitions = read_nfa(filename)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 5, in read_nfa
+    n_states = int(file.readline().strip())
+ValueError: invalid literal for int() with base 10: 'Number of states: 10'
+^^^^^
   test-outputs/simulate/testNFA3-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -209,7 +113,18 @@ vvvvv
 ^^^^^
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA4.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA4.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA4-strings.txt > test-outputs/simulate/testNFA4-out.txt 2> test-outputs/simulate/testNFA4-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 38, in main
+    n_states, initial_state, accepting_states, transitions = read_nfa(filename)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 5, in read_nfa
+    n_states = int(file.readline().strip())
+ValueError: invalid literal for int() with base 10: 'Number of states: 1'
+^^^^^
   test-outputs/simulate/testNFA4-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -219,7 +134,18 @@ vvvvv
 ^^^^^
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA5.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA5.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA5-strings.txt > test-outputs/simulate/testNFA5-out.txt 2> test-outputs/simulate/testNFA5-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 38, in main
+    n_states, initial_state, accepting_states, transitions = read_nfa(filename)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 5, in read_nfa
+    n_states = int(file.readline().strip())
+ValueError: invalid literal for int() with base 10: 'Number of states: 1'
+^^^^^
   test-outputs/simulate/testNFA5-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -229,7 +155,18 @@ vvvvv
 ^^^^^
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA6.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA6.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA6-strings.txt > test-outputs/simulate/testNFA6-out.txt 2> test-outputs/simulate/testNFA6-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 38, in main
+    n_states, initial_state, accepting_states, transitions = read_nfa(filename)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 5, in read_nfa
+    n_states = int(file.readline().strip())
+ValueError: invalid literal for int() with base 10: 'Number of states: 20'
+^^^^^
   test-outputs/simulate/testNFA6-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -239,7 +176,18 @@ vvvvv
 ^^^^^
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA7.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA7.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA7-strings.txt > test-outputs/simulate/testNFA7-out.txt 2> test-outputs/simulate/testNFA7-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 38, in main
+    n_states, initial_state, accepting_states, transitions = read_nfa(filename)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 5, in read_nfa
+    n_states = int(file.readline().strip())
+ValueError: invalid literal for int() with base 10: 'Number of states: 64'
+^^^^^
   test-outputs/simulate/testNFA7-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -249,7 +197,18 @@ vvvvv
 ^^^^^
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA8.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA8.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA8-strings.txt > test-outputs/simulate/testNFA8-out.txt 2> test-outputs/simulate/testNFA8-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 38, in main
+    n_states, initial_state, accepting_states, transitions = read_nfa(filename)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 5, in read_nfa
+    n_states = int(file.readline().strip())
+ValueError: invalid literal for int() with base 10: 'Number of states: 10'
+^^^^^
   test-outputs/simulate/testNFA8-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -259,7 +218,18 @@ vvvvv
 ^^^^^
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA9.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA9.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA9-strings.txt > test-outputs/simulate/testNFA9-out.txt 2> test-outputs/simulate/testNFA9-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 38, in main
+    n_states, initial_state, accepting_states, transitions = read_nfa(filename)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 5, in read_nfa
+    n_states = int(file.readline().strip())
+ValueError: invalid literal for int() with base 10: 'Number of states: 7'
+^^^^^
   test-outputs/simulate/testNFA9-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -269,7 +239,18 @@ vvvvv
 ^^^^^
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFAa.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFAa.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFAa-strings.txt > test-outputs/simulate/testNFAa-out.txt 2> test-outputs/simulate/testNFAa-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 38, in main
+    n_states, initial_state, accepting_states, transitions = read_nfa(filename)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 5, in read_nfa
+    n_states = int(file.readline().strip())
+ValueError: invalid literal for int() with base 10: 'Number of states: 16'
+^^^^^
   test-outputs/simulate/testNFAa-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -279,7 +260,18 @@ vvvvv
 ^^^^^
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFAb.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFAb.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFAb-strings.txt > test-outputs/simulate/testNFAb-out.txt 2> test-outputs/simulate/testNFAb-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 38, in main
+    n_states, initial_state, accepting_states, transitions = read_nfa(filename)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 5, in read_nfa
+    n_states = int(file.readline().strip())
+ValueError: invalid literal for int() with base 10: 'Number of states: 64'
+^^^^^
   test-outputs/simulate/testNFAb-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -293,9 +285,9 @@ done with simulate
 Summary for self-test:
 
 e-remove: execution always completed, but there were errors
-  progress level 4 with 7 execution errors
+  progress level 4 with 1 execution errors
 simulate: execution always completed, but there were errors
   progress level 4 with 22 execution errors
 
-There were a total of 29 execution errors found.
+There were a total of 23 execution errors found.
 ######################################################

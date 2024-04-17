@@ -1,3 +1,5 @@
 Number of states: 2
 Alphabet size: 3
 Accepting states: 0 1
+{} {} {} {}
+{} {} {} {}

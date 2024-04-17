@@ -33,70 +33,50 @@ def read(fileName):
         if symbol != '{}':
           # for e-transitions ('e') if i is 0, else use alphabet symbols
           transitions[state]['e' if i == 0 else alphabet[i-1]] = set(map(int, symbol[1:-1].split(',')))
-          
-    
+        
           
   #print(transitions)
     
 def stage_one():
-    global accepting
-    
-    accepting_set = set(accepting)  # Create a mutable copy of the global accepting states
-    
-    changes_made = True
+  global accepting
 
-    while changes_made:
-      changes_made = False  # Assume no changes, to begin with
-      for state_q in range(n_states):  # Iterate through all states
-        if state_q in accepting_set:  # Skip if state_q is already an accepting state
-          continue
-        
-        e_move = transitions[state_q]['e']  # Get e-transitions for state_q
-       
-        # Check if any state reachable via e-transitions from state_q is an accepting state
-        if any(state_r in accepting_set for state_r in e_move): 
-          accepting_set.add(state_q)  # Add state_q to accepting states
-          changes_made = True  # Mark that a change has been made for the next iteration
+  accepting_set = set(accepting)  # Create a mutable copy of the global accepting states
+  #print(accepting_set)
+  changes_made = True
 
-    accepting = accepting_set  # Update the global accepting states
-    return sorted(accepting)  # Return a sorted list of the updated accepting states
+  while changes_made:
+    changes_made = False  # Assume no changes, to begin with
+    
+    for state_q in range(n_states):  # Iterate through all states
+      if state_q not in accepting_set:  
+        for state_r in range(n_states):
+          if state_r in accepting_set:
+            if state_r in transitions[state_q]['e']:
+              accepting_set.add(state_q)  # add state_q to accepting states
+              changes_made = True # Mark that a change has been made for the next iteration
+              break
+              
+  accepting = accepting_set  # Update the global accepting states
+  return sorted(accepting)  # Return a sorted list of the updated accepting states
   
 def stage_two():
   add_transition = transitions
   
   changes_made = True
-  
 
   while changes_made:
-    changes_made = False
-    # Iterate over each state q in the automaton
-    for q in range(n_states):
-      print("step 1")
-      for r in range(n_states):
-        print("step 2")
-        # Now check transitions from each r via each symbol a in the alphabet
-        for a in alphabet:
-          print("step 3")
-          reachable_from_r = add_transition.get((r), set())
-          print(reachable_from_r)
-          for s in reachable_from_r:
-            print("step 4")
-            # If s is not already in delta(q, a), add it
-            if s not in add_transition.get((q, a), set()):
-              print("step 5")
-              # Update delta(q, a) with s
-              if (q, a) in add_transition:
-                print("step 5.1")
-                add_transition[(q, a)].add(s)
-              else:
-                print("step 5.2")
-                add_transition[(q, a)] = {s}
-              changes_made = True  # Mark that a change was made
-        
-
+    changes_made = False # assume no changes, to begin with
     
-  
-  #print(add_transition)
+    for a in alphabet:
+      for state_q in range(n_states):
+        for state_r in range(n_states):
+          if state_r in add_transition[state_q]['e']:
+            for state_s in range(n_states):
+              if state_s in add_transition[state_r][a]:
+                if state_s not in add_transition[state_q][a]:
+                  new_s = add_transition[state_r][a]
+                  add_transition[state_q][a].update(frozenset(new_s))
+                  changes_made = True
   
   return transitions
   

@@ -1,4 +1,4 @@
-Comments for self-test -------- Tue Apr 16, 2024 at 22:5:58 EDT
+Comments for self-test -------- Wed Apr 17, 2024 at 16:55:18 EDT
 parsing e-remove.txt ... done
 building e-remove ...
 done
@@ -7,50 +7,22 @@ testing e-remove ...
     python3 e-remove.py /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA1.txt > test-outputs/e-remove/testNFA1-out.txt 2> test-outputs/e-remove/testNFA1-err.txt
     terminated normally
   test-outputs/e-remove/testNFA1.txt exists -- comparing with solution NFA
-   Transition table mismatch at state 0:
-      `{}{}{}'
-        vs
-      `{}{2,5}{}'
-  THE DFAs DIFFER (INCORRECT):
-vvvvv
-1
-^^^^^
+  the NFAs are the same (correct)
   Running e-remove on /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA2.txt ...
     python3 e-remove.py /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA2.txt > test-outputs/e-remove/testNFA2-out.txt 2> test-outputs/e-remove/testNFA2-err.txt
     terminated normally
   test-outputs/e-remove/testNFA2.txt exists -- comparing with solution NFA
-   Transition table mismatch at state 0:
-      `{}{}{}'
-        vs
-      `{}{7}{0}'
-  THE DFAs DIFFER (INCORRECT):
-vvvvv
-1
-^^^^^
+  the NFAs are the same (correct)
   Running e-remove on /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA3.txt ...
     python3 e-remove.py /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA3.txt > test-outputs/e-remove/testNFA3-out.txt 2> test-outputs/e-remove/testNFA3-err.txt
     terminated normally
   test-outputs/e-remove/testNFA3.txt exists -- comparing with solution NFA
-   Transition table mismatch at state 1:
-      `{}{}{}'
-        vs
-      `{}{1,7}{0,1,2,3,4,5,6,7}'
-  THE DFAs DIFFER (INCORRECT):
-vvvvv
-1
-^^^^^
+  the NFAs are the same (correct)
   Running e-remove on /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA4.txt ...
     python3 e-remove.py /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA4.txt > test-outputs/e-remove/testNFA4-out.txt 2> test-outputs/e-remove/testNFA4-err.txt
     terminated normally
   test-outputs/e-remove/testNFA4.txt exists -- comparing with solution NFA
-   Transition table mismatch at state 0:
-      `{}{}{}'
-        vs
-      `{}{}{5,7,8}'
-  THE DFAs DIFFER (INCORRECT):
-vvvvv
-1
-^^^^^
+  the NFAs are the same (correct)
   Running e-remove on /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA5.txt ...
     python3 e-remove.py /Users/kaylytran/Desktop/355project/test-files/e-remove/test-e-NFA5.txt > test-outputs/e-remove/testNFA5-out.txt 2> test-outputs/e-remove/testNFA5-err.txt
     terminated normally
@@ -78,7 +50,18 @@ done
 testing simulate ...
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA1.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA1.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA1-strings.txt > test-outputs/simulate/testNFA1-out.txt 2> test-outputs/simulate/testNFA1-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 49, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in main
+    read(fileName)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 23, in read
+    transitions[state][symbol] = set()
+NameError: name 'transitions' is not defined
+^^^^^
   test-outputs/simulate/testNFA1-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -88,7 +71,18 @@ vvvvv
 ^^^^^
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA2.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA2.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA2-strings.txt > test-outputs/simulate/testNFA2-out.txt 2> test-outputs/simulate/testNFA2-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 49, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in main
+    read(fileName)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 23, in read
+    transitions[state][symbol] = set()
+NameError: name 'transitions' is not defined
+^^^^^
   test-outputs/simulate/testNFA2-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -98,7 +92,18 @@ vvvvv
 ^^^^^
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA3.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA3.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA3-strings.txt > test-outputs/simulate/testNFA3-out.txt 2> test-outputs/simulate/testNFA3-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 49, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in main
+    read(fileName)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 23, in read
+    transitions[state][symbol] = set()
+NameError: name 'transitions' is not defined
+^^^^^
   test-outputs/simulate/testNFA3-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -108,7 +113,18 @@ vvvvv
 ^^^^^
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA4.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA4.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA4-strings.txt > test-outputs/simulate/testNFA4-out.txt 2> test-outputs/simulate/testNFA4-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 49, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in main
+    read(fileName)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 23, in read
+    transitions[state][symbol] = set()
+NameError: name 'transitions' is not defined
+^^^^^
   test-outputs/simulate/testNFA4-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -118,7 +134,18 @@ vvvvv
 ^^^^^
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA5.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA5.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA5-strings.txt > test-outputs/simulate/testNFA5-out.txt 2> test-outputs/simulate/testNFA5-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 49, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in main
+    read(fileName)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 23, in read
+    transitions[state][symbol] = set()
+NameError: name 'transitions' is not defined
+^^^^^
   test-outputs/simulate/testNFA5-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -128,7 +155,18 @@ vvvvv
 ^^^^^
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA6.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA6.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA6-strings.txt > test-outputs/simulate/testNFA6-out.txt 2> test-outputs/simulate/testNFA6-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 49, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in main
+    read(fileName)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 23, in read
+    transitions[state][symbol] = set()
+NameError: name 'transitions' is not defined
+^^^^^
   test-outputs/simulate/testNFA6-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -138,7 +176,18 @@ vvvvv
 ^^^^^
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA7.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA7.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA7-strings.txt > test-outputs/simulate/testNFA7-out.txt 2> test-outputs/simulate/testNFA7-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 49, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in main
+    read(fileName)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 23, in read
+    transitions[state][symbol] = set()
+NameError: name 'transitions' is not defined
+^^^^^
   test-outputs/simulate/testNFA7-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -148,7 +197,18 @@ vvvvv
 ^^^^^
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA8.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA8.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA8-strings.txt > test-outputs/simulate/testNFA8-out.txt 2> test-outputs/simulate/testNFA8-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 49, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in main
+    read(fileName)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 23, in read
+    transitions[state][symbol] = set()
+NameError: name 'transitions' is not defined
+^^^^^
   test-outputs/simulate/testNFA8-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -158,7 +218,18 @@ vvvvv
 ^^^^^
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA9.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA9.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFA9-strings.txt > test-outputs/simulate/testNFA9-out.txt 2> test-outputs/simulate/testNFA9-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 49, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in main
+    read(fileName)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 23, in read
+    transitions[state][symbol] = set()
+NameError: name 'transitions' is not defined
+^^^^^
   test-outputs/simulate/testNFA9-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -168,7 +239,18 @@ vvvvv
 ^^^^^
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFAa.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFAa.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFAa-strings.txt > test-outputs/simulate/testNFAa-out.txt 2> test-outputs/simulate/testNFAa-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 49, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in main
+    read(fileName)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 23, in read
+    transitions[state][symbol] = set()
+NameError: name 'transitions' is not defined
+^^^^^
   test-outputs/simulate/testNFAa-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -178,7 +260,18 @@ vvvvv
 ^^^^^
   Running simulate on /Users/kaylytran/Desktop/355project/test-files/simulate/testNFAb.txt ...
     python3 simulator.py /Users/kaylytran/Desktop/355project/test-files/simulate/testNFAb.txt < /Users/kaylytran/Desktop/355project/test-files/simulate/testNFAb-strings.txt > test-outputs/simulate/testNFAb-out.txt 2> test-outputs/simulate/testNFAb-err.txt
-    terminated normally
+    terminated abnormally
+  standard error output:
+vvvvv
+Traceback (most recent call last):
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 49, in <module>
+    main()
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 46, in main
+    read(fileName)
+  File "/Users/kaylytran/Desktop/355project/simulator.py", line 23, in read
+    transitions[state][symbol] = set()
+NameError: name 'transitions' is not defined
+^^^^^
   test-outputs/simulate/testNFAb-out.txt exists -- comparing acc/rej outcomes with solution file
   OUTCOMES DIFFER:
 vvvvv
@@ -192,9 +285,9 @@ done with simulate
 Summary for self-test:
 
 e-remove: execution always completed, but there were errors
-  progress level 4 with 5 execution errors
+  progress level 4 with 1 execution errors
 simulate: execution always completed, but there were errors
   progress level 4 with 22 execution errors
 
-There were a total of 27 execution errors found.
+There were a total of 23 execution errors found.
 ######################################################
