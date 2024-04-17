@@ -1,0 +1,3 @@
+Build:
+Run:
+  python3 e-remove.py

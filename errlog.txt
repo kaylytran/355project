@@ -1,0 +1,5 @@
+comments.txt exists -- making backup comments.bak
+
+Done.
+Comments are in /Users/kaylytran/Desktop/355project/comments.txt
+

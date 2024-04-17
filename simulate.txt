@@ -1,0 +1,4 @@
+Build: 
+Run:
+  python3 simulator.py
+# You still need to say "Build:" even though there are no build commands.

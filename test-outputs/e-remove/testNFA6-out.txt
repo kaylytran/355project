@@ -1,0 +1,3 @@
+Number of states: 1
+Alphabet size: 1
+Accepting states: 
